@@ -1,0 +1,162 @@
+package ru.savimar.EvenNumber.Test;
+
+import org.junit.Test;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
+
+import static org.junit.Assert.assertEquals;
+
+public class EvenNumberTest {
+    @Test
+    public void getEvenNumbersByChars() throws Exception {
+        int[] arr = EvenNumber.getEvenNumbersByChars("34;45;52352;323;32");
+        assertEquals(arr[0] < arr[1], true);
+        assertEquals(arr.length, 3);
+    }
+
+    @Test
+    public void getEvenNumbersByCharsCalculationOfProductivity() throws Exception {
+        LocalDateTime before = LocalDateTime.now();
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.getEvenNumbersByChars("34;45;52352;323;32");
+        }
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.getEvenNumbersByChars("39;90;52352;57;328;5269;74;693;2;1;487;35;17;259;46;87;13;259;41");
+        }
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.getEvenNumbersByChars("17;90;15;38;577;5369;58;6937;25;41;425;493;29;2519;157;82;43;42;75");
+        }
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.getEvenNumbersByChars("1;42;47;82;77;69;518;637;225;411;45;49;2219;29;17;872;4;2;5");
+        }
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.getEvenNumbersByChars("112;4362;7;8;727;789;8;7;25;1;47;45;29;249;147;82;45;24;58");
+        }
+        long millisecond = ChronoUnit.MILLIS.between(before, LocalDateTime.now());
+        System.out.println("lead time getEvenNumbersByChars is " + millisecond);
+
+    }
+
+    @Test
+    public void getEvenNumbersBySplit() throws Exception {
+        int[] arr = EvenNumber.getEvenNumbersBySplit("34;45;52352;323;32");
+        assertEquals(arr[0] < arr[1], true);
+        assertEquals(arr.length, 3);
+    }
+
+    @Test
+    public void getEvenNumbersBySplitCalculationOfProductivity() throws Exception {
+        LocalDateTime before = LocalDateTime.now();
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.getEvenNumbersBySplit("34;45;52352;323;32");
+        }
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.getEvenNumbersBySplit("39;90;52352;57;328;5269;74;693;2;1;487;35;17;259;46;87;13;259;41");
+        }
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.getEvenNumbersBySplit("17;90;15;38;577;5369;58;6937;25;41;425;493;29;2519;157;82;43;42;75");
+        }
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.getEvenNumbersBySplit("1;42;47;82;77;69;518;637;225;411;45;49;2219;29;17;872;4;2;5");
+        }
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.getEvenNumbersBySplit("112;4362;7;8;727;789;8;7;25;1;47;45;29;249;147;82;45;24;58");
+        }
+        long millisecond = ChronoUnit.MILLIS.between(before, LocalDateTime.now());
+        System.out.println("lead time is getEvenNumbersBySplit is " + millisecond);
+
+    }
+
+
+    @Test
+    public void getEvenNumbersByStringTokenizer() throws Exception {
+        int[] arr = EvenNumber.getEvenNumbersByStringTokenizer("34;45;52352;323;32");
+        assertEquals(arr[0] < arr[1], true);
+        assertEquals(arr.length, 3);
+    }
+
+    @Test
+    public void getEvenNumbersByStringTokenizerCalculationOfProductivity() throws Exception {
+        LocalDateTime before = LocalDateTime.now();
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.getEvenNumbersByStringTokenizer("34;45;52352;323;32");
+        }
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.getEvenNumbersByStringTokenizer("39;90;52352;57;328;5269;74;693;2;1;487;35;17;259;46;87;13;259;41");
+        }
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.getEvenNumbersByStringTokenizer("17;90;15;38;577;5369;58;6937;25;41;425;493;29;2519;157;82;43;42;75");
+        }
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.getEvenNumbersByStringTokenizer("1;42;47;82;77;69;518;637;225;411;45;49;2219;29;17;872;4;2;5");
+        }
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.getEvenNumbersByStringTokenizer("112;4362;7;8;727;789;8;7;25;1;47;45;29;249;147;82;45;24;58");
+        }
+        long millisecond = ChronoUnit.MILLIS.between(before, LocalDateTime.now());
+        System.out.println("lead time getEvenNumbersByStringTokenizer is " + millisecond);
+
+    }
+    @Test
+    public void getEvenNumbersByReadString() throws Exception {
+        int[] arr = EvenNumber.readString("34;45;52352;323;32");
+        assertEquals(arr[0] < arr[1], true);
+        assertEquals(arr.length, 3);
+    }
+
+    @Test
+    public void getEvenNumbersByReadStringCalculationOfProductivity()throws Exception {
+        LocalDateTime before = LocalDateTime.now();
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.readString("34;45;52352;323;32");
+        }
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.readString("39;90;52352;57;328;5269;74;693;2;1;487;35;17;259;46;87;13;259;41");
+        }
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.readString("17;90;15;38;577;5369;58;6937;25;41;425;493;29;2519;157;82;43;42;75");
+        }
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.readString("1;42;47;82;77;69;518;637;225;411;45;49;2219;29;17;872;4;2;5");
+        }
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.readString("112;4362;7;8;727;789;8;7;25;1;47;45;29;249;147;82;45;24;58");
+        }
+        long millisecond = ChronoUnit.MILLIS.between(before, LocalDateTime.now());
+        System.out.println("lead time getEvenNumbersByReadString is " + millisecond);
+    }
+
+    @Test
+    public void getEvenNumbersByReadStringByChar() throws Exception {
+        int[] arr = EvenNumber.readStringByChar("34;45;52352;323;32");
+         assertEquals(arr[0] < arr[1], true);
+         assertEquals(arr.length, 3);
+    }
+
+
+    @Test
+    public void getEvenNumbersByReadStringByCharCalculationOfProductivity() throws Exception {
+        LocalDateTime before = LocalDateTime.now();
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.readStringByChar("34;45;52352;323;32");
+        }
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.readStringByChar("39;90;52352;57;328;5269;74;693;2;1;487;35;17;259;46;87;13;259;41");
+        }
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.readStringByChar("17;90;15;38;577;5369;58;6937;25;41;425;493;29;2519;157;82;43;42;75");
+        }
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.readStringByChar("1;42;47;82;77;69;518;637;225;411;45;49;2219;29;17;872;4;2;5");
+        }
+        for (int i = 0; i < 2000; i++) {
+            EvenNumber.readStringByChar("112;4362;7;8;727;789;8;7;25;1;47;45;29;249;147;82;45;24;58");
+        }
+        long millisecond = ChronoUnit.MILLIS.between(before, LocalDateTime.now());
+        System.out.println("lead time getEvenNumbersByReadStringByChar is " + millisecond);
+    }
+
+
+}
+
+
